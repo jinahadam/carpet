@@ -1,0 +1,263 @@
+/* 
+    Document   : global
+    Created on : Nov 2, 2009, 10:28:34 AM
+    Author     : m.jinahadam
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+  global styles
+*/
+body {
+    font-family: "Verdana";
+    font-size: 12px;
+}
+
+
+
+#addformdiv {
+    width: 400px;
+    float:left;
+    padding: 3em;
+
+}
+
+#editformdiv {
+    width: 400px;
+    float:left;
+    padding: 3em;
+
+}
+
+#container
+{
+    width: 90%;
+    margin: 10px auto;
+    /* background-color: #fff;
+     color: #333;
+     border: 1px solid gray;*/
+    line-height: 130%;
+}
+
+#top
+{
+    padding: .5em;
+    /*   background-color: #ddd;
+       border-bottom: 1px solid gray;*/
+}
+
+#top h2 {
+    padding-left: 140px;
+    font-family: "verdana";
+}
+
+#leftnav
+{
+    margin-top: 100px;
+    float: left;
+    width: 160px;
+
+    padding: 1em;
+    background-color: #ddd;
+}
+
+
+#panel1
+{
+    margin-top: 100px;
+    float: left;
+    width: 250px;
+    min-height: 400px;
+    padding: 1em;
+    border: thin dashed red;
+
+}
+
+#panel1 li { 
+    float: left;
+    width: 238px;
+    height: 25px;
+    padding: 8px;
+    margin: 0 0.4em 0.4em 0;
+    list-style: none;
+    background-color: #dddddd;
+    font-size : 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#panel2 li {
+    float: left;
+    width: 238px;
+    height: 25px;
+    padding: 8px;
+    margin: 0 0.4em 0.4em 0;
+    list-style: none;
+    background-color: #dddddd;
+    font-size : 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.panelhighlight {
+     background-color: yellow;
+}
+
+
+#panel2
+{
+    margin-top: 100px;
+    float: right;
+    width: 250px;
+    min-height: 400px;
+    padding: 1em;
+    border: thin dashed red;
+}
+#content
+{
+    margin-left: 200px;
+    /* border-left: 1px solid gray;*/
+    padding: 4em;
+    max-width: 50em;
+}
+
+#listallresultdiv
+{
+    margin-left: 200px;
+    /* border-left: 1px solid gray;*/
+    padding: 4em;
+    max-width: 50em;
+    display:none;
+    z-index: 2000;
+}
+
+#userlisttable {
+    width: 700px;
+    border-collapse:collapse;   
+    font-family: "verdana";
+    font-size: 12px;
+
+
+}
+
+#logstable {
+    width: 800px;
+    border-collapse:collapse;
+    font-family: "verdana";
+    font-size: 12px;
+
+
+}
+
+#edit_content {
+    margin-left: 200px;
+    /* border-left: 1px solid gray;*/
+    padding: 4em;
+    max-width: 50em;
+    z-index: 1000;
+
+}
+
+#userlisttable th{
+    background:gray;
+    font-weight:bold;
+    padding: 5px;
+}
+
+#userlisttable td{
+    padding: 5px;
+}
+
+
+#logstable th{
+    background:gray;
+    font-weight:bold;
+    padding: 5px;
+}
+
+#logstable td{
+    padding: 5px;
+}
+
+#footer
+{
+    clear: both;
+    margin: 0;
+    padding: .5em;
+    /* color: #333;
+     background-color: #ddd;
+     border-top: 1px solid gray;*/
+}
+
+
+label
+{
+    display:block;
+    padding: 5px;
+    font-family: "Verdana";
+    font-size: 12px;
+}
+
+
+
+.note {
+    font-size: 12px;
+    padding: 2px;
+    color:silver;
+}
+
+#messageBox {
+    border: thin dashed #ff0000;
+    background: yellow;
+    color:red;
+    display: none;
+    width: 300px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+
+.focusField{
+    border:solid 2px #73A6FF;
+    background:#EFF5FF;
+    color:#000;
+    width:200px;
+    height: 40px;
+    font-size: 16px;
+    font-weight:bolder;
+
+}
+.idleField{
+    background:#EEE;
+    color: #6F6F6F;
+    border: solid 2px #DFDFDF;
+    width:180px;
+    height: 35px;
+    font-size: 14px;
+}
+
+
+select {
+    width: 160px;
+    height: 20px;
+    font-size: 12px;
+}
+
+.error {
+    color: red;
+    font-size: 10px;
+    padding: 5px;
+}
+
+.bigbutton {
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+    font-weight:bolder;
+}
+
+.editbuttondiv {
+    display:none;
+}
