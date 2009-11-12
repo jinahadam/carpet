@@ -6,6 +6,43 @@
 require_once '../config/db_vars.php';
 //error_reporting(E_ALL);
 
+if($_REQUEST["reservation"] == "validate") {
+//  print_r($_POST);
+    $data = explode(",",$_POST['data']);
+    //print_r($data);
+    foreach($data as $key=>$value) {
+            
+    }
+    
+
+}
+
+if($_REQUEST["reservation"] == "parkinglots") {
+  $stmt = $conn->prepare("select title,PkLotId from parkinglot");
+
+        if ($stmt) {
+
+            $stmt->execute();
+            $stmt->bind_result($title,$PkLotId);
+
+            $str = "[";
+            while ($stmt->fetch()) {
+                $str .= "{optionValue: ".$PkLotId.",optionDisplay: '".$title."'},";
+            }
+            $str = substr($str,0,strlen($str)-1);
+            $str .= "]";
+            echo $str;
+
+        }
+        else {
+    /* Error */
+            printf("Prepared Statement Error: %s\n", $mysqli->error);
+        }
+
+}
+
+
+
 if($_REQUEST["filterby"] == "department") {
     $name = $_REQUEST['id'];
 
@@ -21,6 +58,7 @@ if($_REQUEST["filterby"] == "department") {
             while ($stmt->fetch()) {
                 $str .= "{optionValue: ".$mid.",optionDisplay: '".$name."'},";
             }
+            $str = substr($str,0,strlen($str)-1);
             $str .= "]";
             echo $str;
 
@@ -44,6 +82,7 @@ if($_REQUEST["filter"] == "departments") {
         while ($stmt->fetch()) {
             $str .= "{optionValue: '".$code."',optionDisplay: '".$name."'},";
         }
+        $str = substr($str,0,strlen($str)-1);
         $str .= "]";
         echo $str;
 
@@ -71,6 +110,7 @@ if($_REQUEST["filterby"] == "name") {
             while ($stmt->fetch()) {
                 $str .= "{optionValue: ".$mid.",optionDisplay: '".$name."'},";
             }
+            $str = substr($str,0,strlen($str)-1);
             $str .= "]";
             echo $str;
 
@@ -99,6 +139,7 @@ if($_REQUEST["filterby"] == "paygroup") {
             while ($stmt->fetch()) {
                 $str .= "{optionValue: ".$mid.",optionDisplay: '".$name."'},";
             }
+            $str = substr($str,0,strlen($str)-1);
             $str .= "]";
             echo $str;
 
@@ -139,11 +180,13 @@ if($_REQUEST["filterby"] == "paygroup") {
 
                     while ($stmt2->fetch()) {
                         if($ct == 0) {
+                            
                             $str .= "{optionValue: ". $value['id'].",optionDisplay: '". $value['name']."'},";
                         }
                     }
                 }
             }
+            $str = substr($str,0,strlen($str)-1);
             $str .= "]";
             echo $str;
         }
@@ -168,6 +211,7 @@ if($_REQUEST["filter"] == "paygroups") {
         while ($stmt->fetch()) {
             $str .= "{optionValue: ".$GroupId.",optionDisplay: '".$GroupName."'},";
         }
+        $str = substr($str,0,strlen($str)-1);
         $str .= "]";
         echo $str;
 
@@ -191,6 +235,7 @@ if($_REQUEST["parking"] == "get_data") {
             while ($stmt->fetch()) {
                 $str .= "{optionValue: ".$mid.",optionDisplay: '".$name."'},";
             }
+            $str = substr($str,0,strlen($str)-1);
             $str .= "]";
             echo $str;
 
