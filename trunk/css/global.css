@@ -12,10 +12,17 @@
 body {
     font-family: "Verdana";
     font-size: 12px;
+    
 }
 
 #mstafflist {
     height: 250px;
+}
+
+#assigndiv {
+    
+    float: right;
+    width: 400px;
 }
 
 
@@ -105,7 +112,7 @@ body {
 
 
 .panelhighlight {
-     background-color: yellow;
+    background-color: yellow;
 }
 
 
@@ -120,20 +127,27 @@ body {
 }
 
 #filteroptionsdiv {
-    margin-top: -72px;
+   
     float: right;
-    width: 400px;
+    width: 300px;
+
+}
+#filterdiv {
+
+    float: left;
+    width: 300px;
 
 }
 #content
 {
+    width: 800px;
     margin-left: 200px;
     /* border-left: 1px solid gray;*/
     padding: 4em;
     max-width: 50em;
 }
 
-#listallresultdiv
+#listallresultdivs
 {
     margin-left: 200px;
     /* border-left: 1px solid gray;*/
@@ -143,6 +157,16 @@ body {
     z-index: 2000;
 }
 
+#content_2
+{
+    
+    width: 700px;
+    /* border-left: 1px solid gray;*/
+   
+  
+   
+    z-index: 2000;
+}
 #userlisttable {
     width: 700px;
     border-collapse:collapse;   
@@ -248,7 +272,15 @@ label
     font-size: 14px;
 }
 
+#daterange {
+    background:#EEE;
+    color: #6F6F6F;
+    border: solid 2px #DFDFDF;
+    width:180px;
+    height: 35px;
+    font-size: 14px;
 
+}
 .TAfocusField{
     border:solid 2px #73A6FF;
     background:#EFF5FF;
@@ -275,7 +307,7 @@ label
     width:200px;
     height: 150px;
     font-size: 16px;
-  
+
 
 }
 .SidleField{
@@ -307,5 +339,9 @@ select {
 }
 
 .editbuttondiv {
+    display:none;
+}
+
+#dayselection {
     display:none;
 }
